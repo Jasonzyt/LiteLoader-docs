@@ -25,10 +25,10 @@ Lua可以热重载，通过/lreload指令。
 `runCmdEx(指令:str)`->(bool,str)</br>
 以**控制台**运行并**获取输出**</br>
 例如:
-<pre>
+```lua
 success,output=runCmdEx(“/clear Steve dirt 3”)
 Print(success,output)  -- true     output.....
-</pre>
+```
 
 `schedule(回调函数名:str,定时间隔:int,第一次执行延迟:int)`->int</br>
 计划定时任务 返回int，表示任务id</br>
@@ -36,7 +36,7 @@ Print(success,output)  -- true     output.....
 `cancel(任务id:int)`
 通过schedule返回的任务ID取消任务</br>
 例如:
-<pre>
+```lua
 function timer()
 print(“hi”)
 end
@@ -45,7 +45,7 @@ schedule(“timer”,0,10)     --- 5秒后执行，只执行一次
 schedule(“timer”,10,10)    --- 5秒后执行第一次，每5秒再执行一次
 
 cancel(id)    --- 取消第一个任务
-</pre>
+```
 
 **获取在线玩家列表:** 
 `oList()`->table
