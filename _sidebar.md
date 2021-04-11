@@ -1,3 +1,3 @@
 ## Language
-[LL/English](Home)  
-[LL/简体中文](主页)
+[English](LL/Home)  
+[简体中文]zh_cn/LL/(主页)
