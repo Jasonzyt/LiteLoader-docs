@@ -6,8 +6,8 @@
 
 * [LiteLuaLoader](zh_cn/LLlua/)
 
-  * [ActorAPI](zh_cn/LLlua/ActorAPI.md)
-  * [基础API](zh_cn/LLlua/BaseAPI.md)
-  * [方块API](zh_cn/LLlua/BlockAPI.md)
-  * [物品API](zh_cn/LLlua/ItemAPI.md)
-  * [NBT相关API](zh_cn/LLlua/NBTAPI.md)
+  * [ActorAPI](zh_cn/LLlua/ActorApi)
+  * [基础API](zh_cn/LLlua/BaseApi)
+  * [方块API](zh_cn/LLlua/BlockApi)
+  * [物品API](zh_cn/LLlua/ItemApi)
+  * [NBT相关API](zh_cn/LLlua/NBTApi)
