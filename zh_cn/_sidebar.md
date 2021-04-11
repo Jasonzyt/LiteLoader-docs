@@ -1,5 +1,3 @@
-* [Docs HomePage](/)
-
 * LiteLoader
 
   * [插件开发](zh_cn/LL/Plugin-development)  

@@ -1,5 +1,3 @@
-* [Docs HomePage](/)
-
 * LiteLoader
 
   * [Plugin development](LL/Plugin-development)  
