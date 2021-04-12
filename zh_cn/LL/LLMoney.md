@@ -1,9 +1,9 @@
 # 经济
 ## 概述
 文件名:`LLMoney.dll`  
-语言包:`landpack/money.json`  
-配置文件:`config/money.json`  
-数据库:`data/money.db` 数据库为sqlite格式
+语言包:`plugins/LLMoney/landpack/money.json`  
+配置文件:`plugins/LLMoney/money.json`  
+数据库:`plugins/LLMoney/money.db` 数据库为sqlite格式
 
 ## 功能
 带流水的经济，通过sql储存，可多服同步

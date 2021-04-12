@@ -1,9 +1,9 @@
 # LLMoney
 ## Description
 File Name: `LLMoney.dll`  
-Language Pack: `landpack/money.json`  
-Config File: `config/money.json`  
-Database(sqlite): `data/money.db` 
+Language Pack: `plugins/LLMoney/landpack/money.json`  
+Config File: `plugins/LLMoney/money.json`  
+Database(sqlite): `plugins/LLMoney/money.db` 
 
 ## Functions
 economy plugin with turnover function, storage by sqlite, support multipe server sync
