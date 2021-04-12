@@ -6,7 +6,7 @@
 
 * Plugins
   
-  * [LLMoney](zh_cn/LL/LLMoney)
+  * [LLMoney](LL/LLMoney)
   * [LiteLuaLoader](zh_cn/LLlua/)
 
     * [ActorAPI](zh_cn/LLlua/ActorApi)
