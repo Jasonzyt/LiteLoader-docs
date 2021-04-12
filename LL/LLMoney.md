@@ -1,14 +1,14 @@
-## LLMoney
-### Description
+# LLMoney
+## Description
 File Name: `LLMoney.dll`  
 Language Pack: `landpack/money.json`  
 Config File: `config/money.json`  
 Database(sqlite): `data/money.db` 
 
-### Functions
+## Functions
 economy plugin with turnover function, storage by sqlite, support multipe server sync
 
-### Commands
+## Commands
 `/money query [player]` query own balance or others  
 `/money hist [player]` query own turnover or others  
 such as:`/money query`  
@@ -24,7 +24,7 @@ such as:`/money query`
 
 <u>`/money reduce` can be used in commands block</u>
 
-### Config File
+## Configuration File
 ```
 {
 "def_money":0, //balance by default

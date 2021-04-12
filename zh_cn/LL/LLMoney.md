@@ -1,14 +1,14 @@
-## 经济
-### 概述
+# 经济
+## 概述
 文件名:`LLMoney.dll`  
 语言包:`landpack/money.json`  
 配置文件:`config/money.json`  
 数据库:`data/money.db` 数据库为sqlite格式
 
-### 功能
+## 功能
 带流水的经济，通过sql储存，可多服同步
 
-### 指令
+## 指令
 `/money query [玩家名]` 查自己的余额或者指定玩家的  
 `/money hist [玩家名]` 查自己的历史或者指定玩家的  
 例如:`/money query`  
@@ -24,7 +24,7 @@
 
 <u>注意:`/money reduce`存在返回状态，可以联动链命令方块使用</u>
 
-### 配置文件
+## 配置文件
 ```
 {
 "def_money":0,   //默认金钱，整数
