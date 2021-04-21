@@ -7,8 +7,26 @@
 * 插件
 
   * [LLMoney](zh_cn/LL/LLMoney)
-  * [LiteLuaLoader](zh_cn/LLlua/)
 
+  * [LiteXLoader](zh_cn/LXL)
+    * 简介
+      * [快速入门](zh_cn/LXL/Features)
+      * [兼容性与脚本基础库](zh_cn/LXL/BaseLib)
+    * 游戏互动接口
+      * [通用 API](zh_cn/LXL/BaseApi)
+      * [方块 API](zh_cn/LXL/BlockAp)
+      * [物品 API](zh_cn/LXL/ItemApi)
+      * [实体 API](zh_cn/LXL/ActorApi)
+      * [事件监听 API](zh_cn/LXL/EventApi)
+      * [NBT相关 API](zh_cn/LXL/NBTApi)
+      * [GUI相关 API](zh_cn/LXL/GUIApi)
+    * 引擎辅助接口
+      * [文件系统 API](zh_cn/LXL/FileSystemApi)
+      * [网络相关 API](zh_cn/LXL/NetworkApi)
+      * [文件数据库 API](zh_cn/LXL/DBApi)
+    * [开发计划](zh_cn/LXL/Future)
+  
+  * [LiteLuaLoader](zh_cn/LLlua/)
     * [ActorAPI](zh_cn/LLlua/ActorApi)
     * [基础API](zh_cn/LLlua/BaseApi)
     * [方块API](zh_cn/LLlua/BlockApi)
