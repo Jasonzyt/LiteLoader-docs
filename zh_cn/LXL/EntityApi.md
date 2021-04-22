@@ -14,25 +14,55 @@
         - 如返回值为 0 则表示获取玩家失败
     - 参数：
         - info : `String`  
-        玩家的名字或者Xuid
+        玩家的名字或者Xuid  
 <br>
 
-- 根据玩家指针获取其Xuid  
+- 获取玩家名字  
+`getName(player)`
+    - 返回值：目标玩家的名字
+    - 返回值类型： `String` 
+        - 如返回值为 空字符串 则表示获取名字失败
+    - 参数：
+        - target : `Pointer`  
+        待查询的玩家指针  
+<br>
+
+- 获取玩家Xuid  
 `getXuid(player)`
     - 返回值：玩家的Xuid  
     - 返回值类型：`String` 
         - 如返回值为 空字符串 则表示获取Xuid失败
     - 参数：
         - player : `Pointer`  
-        玩家指针
+        玩家指针  
+<br>
+
+- 获取玩家坐标  
+`getPos(player)`
+    - 返回值：目标玩家的位置
+    - 返回值类型：`Vec4` （详见 [通用API](zh_cn/LXL/BaseApi) ）
+        - 如返回值为 `Null` 则表示获取位置失败
+    - 参数：
+        - target : `Pointer`  
+        待查询的玩家指针  
+<br>
+
+- 根据玩家指针获取真实名字（无法被篡改）  
+`getRealName(player)`
+    - 返回值：目标玩家的真实名字
+    - 返回值类型： `String` 
+        - 如返回值为 空字符串 则表示获取名字失败
+    - 参数：
+        - target : `Pointer`  
+        待查询的玩家指针  
 <br>
 
 - 获取在线玩家列表  
-`getOnLinePlayers()`
+`getOnlinePlayers()`
     - 返回值：在线的玩家列表（一个由玩家指针组成的数组）
-    - 返回值类型：`Array<Pointer>`
+    - 返回值类型：`Array<Pointer,Pointer,...>`
     - 参数：
-        - 无
+        - 无  
 <br>
 
 - 断开指定玩家连接  
@@ -41,7 +71,7 @@
     - 返回值类型：`Boolean`
     - 参数：
         - player : `Pointer`  
-        玩家指针
+        玩家指针  
 <br>
 
 - 发送一个原始显示文本给玩家  
@@ -52,7 +82,7 @@
         - player : `Pointer`  
         玩家指针
         - msg : `String`  
-        待发送的文本 / rawjson文本
+        待发送的文本 / rawjson文本  
 <br>
 
 - 传送玩家至指定位置  
@@ -63,7 +93,7 @@
         - player : `Pointer`  
         玩家指针
         - pos : `Vec4`  
-        目标位置对象（详见 [通用API](zh_cn/LXL/BaseApi) ）
+        目标位置对象（详见 [通用API](zh_cn/LXL/BaseApi) ）  
 <br>
 
 - 以指定玩家身份执行一条指令  

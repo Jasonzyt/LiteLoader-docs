@@ -11,7 +11,7 @@
         - event : `String`  
         要监听的事件名（见下方监听事件列表）
         - callback : `Function`  
-        注册的监听函数
+        注册的监听函数  
 <br>
 
 ---
