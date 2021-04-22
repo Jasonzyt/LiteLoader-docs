@@ -14,9 +14,10 @@
       * [兼容性与脚本基础库](zh_cn/LXL/BaseLib)
     * 游戏互动接口
       * [通用 API](zh_cn/LXL/BaseApi)
-      * [方块 API](zh_cn/LXL/BlockAp)
+      * [方块 API](zh_cn/LXL/BlockApi)
       * [物品 API](zh_cn/LXL/ItemApi)
-      * [实体 API](zh_cn/LXL/ActorApi)
+      * [实体 API](zh_cn/LXL/EntityApi)
+      * [玩家 API](zh_cn/LXL/PlayerApi)
       * [事件监听 API](zh_cn/LXL/EventApi)
       * [NBT相关 API](zh_cn/LXL/NBTApi)
       * [GUI相关 API](zh_cn/LXL/GUIApi)
