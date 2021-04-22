@@ -69,8 +69,10 @@
 
 - 执行一条后台指令（强化版）  
 `runCmdEx(cmd)`
-    - 返回值：
-    - 返回值类型： `` 
+    - 返回值：结果`Object`  
+    成员 result 为`Boolean`型，表示是否执行成功  
+    成员 output 为`String`型，返回BDS执行命令后的输出结果  
+    - 返回值类型： `Object<Boolean,String>` 
     - 参数：
         - cmd : `String`  
         待执行的命令  

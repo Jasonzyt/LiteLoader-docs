@@ -40,7 +40,7 @@
 - 获取玩家坐标  
 `getPos(player)`
     - 返回值：目标玩家的位置
-    - 返回值类型：`Vec4` （详见 [通用API](zh_cn/LXL/BaseApi) ）
+    - 返回值类型：`Vec4` （详见 [通用API](BaseApi) ）
         - 如返回值为 `Null` 则表示获取位置失败
     - 参数：
         - target : `Pointer`  
@@ -93,7 +93,7 @@
         - player : `Pointer`  
         玩家指针
         - pos : `Vec4`  
-        目标位置对象（详见 [通用API](zh_cn/LXL/BaseApi) ）  
+        目标位置对象（详见 [通用API](BaseApi) ）  
 <br>
 
 - 以指定玩家身份执行一条指令  
