@@ -192,10 +192,20 @@
 
 ### `"OnChangeSlot"` - 玩家向容器放入 / 取出物品
 - 监听函数原型  
-`function(player)`
+`function(player,container,slotNum,isPutIn,item)`
 - 参数：
     - player : `Pointer`  
-    的玩家指针
+    操作容器的玩家指针
+    - container : `Pointer`  
+    被操作的容器的方块指针
+    - slotNum : `Number`  
+    操作容器的格子位置（第x个格子）
+    - isPutIn : `Boolean`  
+    是否为放入物品
+        - 为 `true` 表示正在放入物品
+        - 为 `false` 表示正在取出物品
+    - item : `Pointer`  
+    被操作的物品指针
 - 拦截事件：不可以拦截
 <br>
 
