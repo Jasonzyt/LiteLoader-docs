@@ -3,7 +3,7 @@
 
 ## 监听 API
 注册指定的监听函数。当事件发生时，监听函数将被引擎调用以供处理相关事件。  
-#### 新增监听器  
+### 新增监听器  
 `listen(event,callback)`
 - 参数：
     - event : `String`  
@@ -18,7 +18,7 @@
 ## 监听事件列表
 目前，LiteXLoader支持如下这些事件的监听。
 
-#### `"OnJoin"` - 玩家进入服务器
+### `"OnJoin"` - 玩家进入服务器
 - 监听函数原型  
 `function(player)`
 - 参数：
@@ -27,7 +27,7 @@
 - 拦截事件：不可以拦截
 <br>
 
-#### `"OnLeft"` - 玩家离开服务器
+### `"OnLeft"` - 玩家离开服务器
 - 监听函数原型  
 `function(player)`
 - 参数：
@@ -36,7 +36,7 @@
 - 拦截事件：不可以拦截
 <br>
 
-#### `"OnRespawn"` - 玩家重生
+### `"OnRespawn"` - 玩家重生
 - 监听函数原型  
 `function(player)`
 - 参数：
@@ -45,7 +45,7 @@
 - 拦截事件：不可以拦截
 <br>
 
-#### `"OnChangeDim"` - 玩家切换维度
+### `"OnChangeDim"` - 玩家切换维度
 - 监听函数原型  
 `function(player)`
 - 参数：
@@ -54,7 +54,7 @@
 - 拦截事件：不可以拦截
 <br>
 
-#### `"OnPlayerCmd"` - 玩家执行命令
+### `"OnPlayerCmd"` - 玩家执行命令
 - 监听函数原型  
 `function(player,cmd)`
 - 参数：
@@ -65,7 +65,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnChat"` - 玩家发送聊天信息
+### `"OnChat"` - 玩家发送聊天信息
 - 监听函数原型  
 `function(player,msg)`
 - 参数：
@@ -76,7 +76,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnAttack"` - 玩家攻击实体
+### `"OnAttack"` - 玩家攻击实体
 - 监听函数原型  
 `function(player,entiey)`
 - 参数：
@@ -87,7 +87,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnUseItem"` - 玩家使用物品
+### `"OnUseItem"` - 玩家使用物品
 - 监听函数原型  
 `function(player,item)`
 - 参数：
@@ -98,7 +98,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnTakeItem"` - 玩家捡起物品
+### `"OnTakeItem"` - 玩家捡起物品
 - 监听函数原型  
 `function(player,item)`
 - 参数：
@@ -109,7 +109,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnDropItem"` - 玩家丢出物品
+### `"OnDropItem"` - 玩家丢出物品
 - 监听函数原型  
 `function(player,item)`
 - 参数：
@@ -120,7 +120,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnDestroyBlock"` - 玩家破坏方块
+### `"OnDestroyBlock"` - 玩家破坏方块
 - 监听函数原型  
 `function(player,block,pos)`
 - 参数：
@@ -133,7 +133,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnPlaceBlock"` - 玩家放置方块
+### `"OnPlaceBlock"` - 玩家放置方块
 - 监听函数原型  
 `function(player,block)`
 - 参数：
@@ -146,7 +146,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnOpenChest"` - 玩家打开箱子
+### `"OnOpenChest"` - 玩家打开箱子
 - 监听函数原型  
 `function(player,pos)`
 - 参数：
@@ -157,7 +157,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnCloseChest"` - 玩家关闭箱子
+### `"OnCloseChest"` - 玩家关闭箱子
 - 监听函数原型  
 `function(player,pos)`
 - 参数：
@@ -168,7 +168,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnOpenBarrel"` - 玩家打开木桶
+### `"OnOpenBarrel"` - 玩家打开木桶
 - 监听函数原型  
 `function(player,pos)`
 - 参数：
@@ -179,7 +179,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnCloseBarrel"` - 玩家关闭木桶
+### `"OnCloseBarrel"` - 玩家关闭木桶
 - 监听函数原型  
 `function(player)`
 - 参数：
@@ -190,7 +190,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnChangeSlot"` - 玩家向容器放入 / 取出物品
+### `"OnChangeSlot"` - 玩家向容器放入 / 取出物品
 - 监听函数原型  
 `function(player)`
 - 参数：
@@ -199,7 +199,7 @@
 - 拦截事件：不可以拦截
 <br>
 
-#### `"OnMobDie"` - 生物死亡（包括玩家）
+### `"OnMobDie"` - 生物死亡（包括玩家）
 - 监听函数原型  
 `function(mob,source)`
 - 参数：
@@ -210,7 +210,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnMobHurt"` - 生物受伤（包括玩家）
+### `"OnMobHurt"` - 生物受伤（包括玩家）
 - 监听函数原型  
 `function(mob,source)`
 - 参数：
@@ -221,7 +221,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnExplode"` - 发生爆炸
+### `"OnExplode"` - 发生爆炸
 - 监听函数原型  
 `function(source,pos)`
 - 参数：
@@ -232,7 +232,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnCmdBlockExecute"` - 命令方块执行命令
+### `"OnCmdBlockExecute"` - 命令方块执行命令
 - 监听函数原型  
 `function(cmd,pos)`
 - 参数：
@@ -243,7 +243,7 @@
 - 拦截事件：函数返回`false`
 <br>
 
-#### `"OnServerStarted"` - 服务器启动完毕
+### `"OnServerStarted"` - 服务器启动完毕
 - 监听函数原型  
 `function()`
 - 参数：
@@ -251,7 +251,7 @@
 - 拦截事件：不可以拦截
 <br>
 
-#### `"OnServerCmd"` - 服务端执行后台命令
+### `"OnServerCmd"` - 服务端执行后台命令
 - 监听函数原型  
 `function(cmd)`
 - 参数：

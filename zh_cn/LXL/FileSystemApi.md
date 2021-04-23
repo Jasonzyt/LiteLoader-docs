@@ -6,7 +6,7 @@
 
 > 注：所有文本相关的操作均使用UTF-8编码
 
-#### 读入文件的所有内容（文本格式）  
+### 读入文件的所有内容（文本格式）  
 `fileReadAll(path)`
 - 参数：
     - path : `String`  
@@ -16,7 +16,7 @@
     - 如返回值为 Null 则表示读取失败  
 <br>
 
-#### 清空指定文件的所有内容并写入（文本格式）  
+### 清空指定文件的所有内容并写入（文本格式）  
 `fileWriteAll(path,text)`
 - 参数：
     - path : `String`  
@@ -27,7 +27,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 向指定文件追加一行（文本格式）  
+### 向指定文件追加一行（文本格式）  
 `fileWriteLine(path,text)`
 - 参数：
     - path : `String`  
@@ -38,7 +38,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 读入文件的所有内容（二进制格式）  
+### 读入文件的所有内容（二进制格式）  
 `fileReadRaw(path)`
 - 参数：
     - path : `String`  
@@ -48,7 +48,7 @@
     - 如返回值为 Null 则表示读取失败  
 <br>
 
-#### 清空指定文件的所有内容并写入（二进制格式）  
+### 清空指定文件的所有内容并写入（二进制格式）  
 `fileWriteRaw(path,data)`
 - 参数：
     - path : `String`  
@@ -63,7 +63,7 @@
 
 > 注：所有传入函数的相对路径都以BDS根目录为基准
 
-#### 创建文件夹  
+### 创建文件夹  
 `dirCreate(dir)`
 - 参数：
     - dir : `String`  
@@ -73,7 +73,7 @@
 - 返回值类型：`Boolean`     
 <br>
 
-#### 删除文件 / 文件夹  
+### 删除文件 / 文件夹  
 `pathDelete(path)`
 - 参数：
     - path : `String`  
@@ -82,7 +82,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 判断文件 / 文件夹是否存在  
+### 判断文件 / 文件夹是否存在  
 `pathExists(path)`
 - 参数：
     - path : `String`  
@@ -91,7 +91,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 判断文件 / 文件夹是否存在  
+### 判断文件 / 文件夹是否存在  
 `pathExists(path)`
 - 参数：
     - path : `String`  
@@ -100,7 +100,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 复制文件 / 文件夹到指定位置  
+### 复制文件 / 文件夹到指定位置  
 `pathCopy(from,to)`
 - 参数：
     - from : `String`  
@@ -111,7 +111,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 移动文件 / 文件夹到指定位置  
+### 移动文件 / 文件夹到指定位置  
 `pathCopy(from,to)`
 - 参数：
     - from : `String`  
@@ -122,7 +122,7 @@
 - 返回值类型：`Boolean`   
 <br>
 
-#### 重命名指定文件 / 文件夹  
+### 重命名指定文件 / 文件夹  
 `pathRename(from,to)`
 - 参数：
     - from : `String`  
@@ -135,7 +135,7 @@
 
 ## 系统调用 API
 
-#### 调用shell执行指定命令（注意！不是MC命令）  
+### 调用shell执行指定命令（注意！不是MC命令）  
 `systemCmd(cmd,callback)`
 - 参数：
     - cmd : `String`  

@@ -3,7 +3,7 @@
 
 ## 实体 API
 
-#### 传送实体至指定位置  
+### 传送实体至指定位置  
 `teleport(entity,pos)`
 - 参数：
     - entity : `Pointer`  
