@@ -5,7 +5,7 @@
 > 接下来，我们熟悉几种在使用 API 过程中会频繁用到的数据类型
 
 ### 通用数据类型
-由于LiteXLoader支持多种不同的脚本语言，为了方便起见，给一些通用的数据类型以统一的称呼。  
+虽然脚本语言通常是弱类型的，不需要关注具体的数据类型，但由于LiteXLoader支持多种不同的脚本语言，为了方便对接API，下面定义一些通用的数据类型。请你首先务必熟悉这些称呼的意思。  
 - `Null` - 空（未定义，不存在等等）
 - `Number` - 数字（可以是整数 / 浮点数，视具体情况）
 - `String` - 字符串
@@ -25,11 +25,15 @@
 
 ### Vec4对象
 在游戏中，数量众多的 API 都需要提供位置坐标。引擎采用Vec4类型的对象来标示坐标。  
-对于 `Vec4` 类型变量 v：  
-- `v.x` - x坐标  
-- `v.y` - y坐标  
-- `v.z` - z坐标  
-- `v.dim` - 维度（0主世界，1下界，2末地）
+对于一个 `Vec4` 类型变量 v：  
+- 成员 `v.x` : `Number`  
+x坐标  
+- 成员 `v.y` : `Number`  
+y坐标  
+- 成员 `v.z` : `Number`  
+z坐标  
+- 成员 `v.dim` : `Number`  
+维度（0 主世界，1 下界，2 末地）
 
 ---
 
@@ -72,8 +76,10 @@
     - cmd : `String`  
     待执行的命令  
 - 返回值：结果`Object`  
-成员 result 为`Boolean`型，表示是否执行成功  
-成员 output 为`String`型，返回BDS执行命令后的输出结果  
+    - 成员 result : `Boolean`  
+    表示是否执行成功  
+    - 成员 output : `String`  
+    返回BDS执行命令后的输出结果  
 - 返回值类型： `Object<Boolean,String>`   
 <br>
 
@@ -140,6 +146,34 @@
     由前两个函数返回的任务ID  
 - 返回值：是否取消成功
 - 返回值类型： `Boolean`   
+<br>
+
+### 获取当前时间字符串  
+`getTimeStr()`
+- 参数：
+    - 无
+- 返回值：当前的时间字符串，形如`2021-04-03 19:15:00`
+- 返回值类型：`String`  
+<br>
+
+### 获取当前的时间对象
+`getTimeNow()`
+- 返回值：结果`Object`  
+    - 成员 Y : `Number`  
+    年份数值（4位）  
+    - 成员 M : `Number`  
+    月份数值
+    - 成员 D : `Number`  
+    天数数值
+    - 成员 h : `Number`  
+    小时数值
+    - 成员 m : `Number`  
+    分钟数值
+    - 成员 s : `Number`  
+    秒数值
+    - 成员 ms : `Number`  
+    毫秒数值
+- 返回值类型： `Object<Number,Number,Number,Number,Number,Number,Number>`  
 <br>
 
 ### 启动一个新的脚本插件
