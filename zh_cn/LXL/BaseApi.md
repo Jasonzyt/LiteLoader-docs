@@ -39,62 +39,62 @@
 
 - 获取指定对象名字  
 `getName(target)`
-    - 返回值：目标对象的名字
-    - 返回值类型： `String` 
-        - 如返回值为 空字符串 则表示获取名字失败
     - 参数：
         - target : `Pointer`  
         待查询的对象指针  
+    - 返回值：目标对象的名字
+    - 返回值类型： `String` 
+        - 如返回值为 空字符串 则表示获取名字失败  
 <br>
 
 - 获取指定对象坐标  
 `getPos(target)`
-    - 返回值：目标对象的位置
-    - 返回值类型：`Vec4` 
-        - 如返回值为 `Null` 则表示获取位置失败
     - 参数：
         - target : `Pointer`  
         待查询的对象指针  
+    - 返回值：目标对象的位置
+    - 返回值类型：`Vec4` 
+        - 如返回值为 `Null` 则表示获取位置失败  
 <br>
 
 - 执行一条后台命令  
 `runCmd(cmd)`
-    - 返回值：是否执行成功
-    - 返回值类型： `Boolean` 
     - 参数：
         - cmd : `String`  
         待执行的命令  
+    - 返回值：是否执行成功
+    - 返回值类型： `Boolean`  
 <br>
 
 - 执行一条后台命令（强化版）  
 `runCmdEx(cmd)`
-    - 返回值：结果`Object`  
-    成员 result 为`Boolean`型，表示是否执行成功  
-    成员 output 为`String`型，返回BDS执行命令后的输出结果  
-    - 返回值类型： `Object<Boolean,String>` 
     - 参数：
         - cmd : `String`  
         待执行的命令  
+    - 返回值：结果`Object`  
+    成员 result 为`Boolean`型，表示是否执行成功  
+    成员 output 为`String`型，返回BDS执行命令后的输出结果  
+    - 返回值类型： `Object<Boolean,String>`   
 <br>
 
 - 注册一个命令  
 `registerCmd(cmd,description)`
-    - 返回值：是否成功注册
-    - 返回值类型：`Boolean`
     - 参数：
         - cmd : `String`
         待注册命令
         - description : `String`
         命令描述文本  
+    - 返回值：是否成功注册
+    - 返回值类型：`Boolean`  
 <br>
 
 - 设置服务器Motd  
 `setServerMotd(motd)`
-    - 返回值：是否设置成功
-    - 返回值类型：`Boolean`
     - 参数：
         - motd : `String`  
         目标Motd字符串  
+    - 返回值：是否设置成功
+    - 返回值类型：`Boolean`  
 <br>
 
 ---
@@ -103,55 +103,57 @@
 
 - 输出到控制台  
 `log(data1,data2,...)`
-    - 返回值：无
     - 参数：
         - data : `任意类型`  
         待输出的变量或者数据  
         可以是任意类型，参数数量可以是任意个  
+    - 返回值：无  
 <br>
 
 
 - 推迟一段时间执行函数  
 `setTimeout(func,msec)`
-    - 返回值：此任务ID
-    - 返回值类型：`Number` 
     - 参数：
         - func : `Function`  
         待执行的函数
         - msec : `Number`  
         推迟执行的时间（毫秒）  
+    - 返回值：此任务ID
+    - 返回值类型：`Number`   
 <br>
 
 - 设置周期执行函数  
 `setInterval(func,msec)`
-    - 返回值：此任务ID
-    - 返回值类型： `Number` 
     - 参数：
         - func : `Function`  
         待执行的函数
         - msec : `Number`  
         执行间隔周期（毫秒）  
+    - 返回值：此任务ID
+    - 返回值类型： `Number`   
 <br>
 
 - 取消延期执行或周期执行函数  
 `cancelTimeTask(taskid)`
-    - 返回值：是否取消成功
-    - 返回值类型： `Boolean` 
     - 参数：
         - timerid : `Number`  
         由前两个函数返回的任务ID  
+    - 返回值：是否取消成功
+    - 返回值类型： `Boolean`   
 <br>
 
 - 启动一个新的脚本插件
 (仅用于运行时动态加载插件，若要导入外部代码请用各自语言的import或者require)  
 `loadPlugin(path)`
-    - 返回值：是否启动成功
-    - 返回值类型： `Boolean` 
     - 参数：
         - path : `String`  
         要加载的插件文件路径（如`addplugin.js`)  
+    - 返回值：是否启动成功
+    - 返回值类型： `Boolean`   
 <br>
 
 - 获取LiteXLoader加载器版本
 `getVersion()`
+    - 参数：
+        - 无
     - 返回值：
