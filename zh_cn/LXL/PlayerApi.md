@@ -120,3 +120,12 @@
         - newname : `String`  
         玩家的新名字  
 <br>
+
+- 使玩家着火  
+`setOnFire(player)`
+    - 返回值：是否操作成功
+    - 返回值类型：`Boolean`
+    - 参数：
+        - player : `Pointer`
+        目标玩家指针  
+<br>

@@ -15,6 +15,7 @@
 - `Array` - 数组 / 列表
 - `Object` - 对象
 - `Pointer` - 下面提到的对象指针
+- `Vec4` - 下面提到的位置坐标对象
 <br>
 
 ### 对象指针
@@ -36,15 +37,6 @@
 这些是在编写脚本过程中到处需要使用到的 API  
 > 下文中的 `对象指针` 为统称，可以传入 方块指针，实体指针，玩家指针 等等各种元素指针 
 
-- 输出到控制台  
-`log(data1,data2,...)`
-    - 返回值：无
-    - 参数：
-        - data : `任意类型`  
-        待输出的变量或者数据  
-        可以是任意类型，参数数量可以是任意个  
-<br>
-
 - 获取指定对象名字  
 `getName(target)`
     - 返回值：目标对象的名字
@@ -65,7 +57,7 @@
         待查询的对象指针  
 <br>
 
-- 执行一条后台指令  
+- 执行一条后台命令  
 `runCmd(cmd)`
     - 返回值：是否执行成功
     - 返回值类型： `Boolean` 
@@ -74,7 +66,7 @@
         待执行的命令  
 <br>
 
-- 执行一条后台指令（强化版）  
+- 执行一条后台命令（强化版）  
 `runCmdEx(cmd)`
     - 返回值：结果`Object`  
     成员 result 为`Boolean`型，表示是否执行成功  
@@ -83,6 +75,17 @@
     - 参数：
         - cmd : `String`  
         待执行的命令  
+<br>
+
+- 注册一个命令  
+`registerCmd(cmd,description)`
+    - 返回值：是否成功注册
+    - 返回值类型：`Boolean`
+    - 参数：
+        - cmd : `String`
+        待注册命令
+        - description : `String`
+        命令描述文本  
 <br>
 
 - 设置服务器Motd  
@@ -98,6 +101,16 @@
 ## 辅助 API
 这些是在编写脚本过程中到处需要使用到的，起辅助作用的 API  
 
+- 输出到控制台  
+`log(data1,data2,...)`
+    - 返回值：无
+    - 参数：
+        - data : `任意类型`  
+        待输出的变量或者数据  
+        可以是任意类型，参数数量可以是任意个  
+<br>
+
+
 - 推迟一段时间执行函数  
 `setTimeout(func,msec)`
     - 返回值：此任务ID
@@ -106,7 +119,7 @@
         - func : `Function`  
         待执行的函数
         - msec : `Number`  
-        推迟的时间（毫秒）  
+        推迟执行的时间（毫秒）  
 <br>
 
 - 设置周期执行函数  
@@ -121,7 +134,7 @@
 <br>
 
 - 取消延期执行或周期执行函数  
-`cancelTimeout(taskid)`
+`cancelTimeTask(taskid)`
     - 返回值：是否取消成功
     - 返回值类型： `Boolean` 
     - 参数：
@@ -131,10 +144,14 @@
 
 - 启动一个新的脚本插件
 (仅用于运行时动态加载插件，若要导入外部代码请用各自语言的import或者require)  
-`loadPlugin(name)`
+`loadPlugin(path)`
     - 返回值：是否启动成功
     - 返回值类型： `Boolean` 
     - 参数：
-        - name : `String`  
-        要加载的插件名（如`addplugin.js`)  
+        - path : `String`  
+        要加载的插件文件路径（如`addplugin.js`)  
 <br>
+
+- 获取LiteXLoader加载器版本
+`getVersion()`
+    - 返回值：
