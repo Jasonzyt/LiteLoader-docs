@@ -237,7 +237,7 @@
 - 参数：
     - source : `Pointer`  
     爆炸来源的实体指针
-    - pos : `Vec4`
+    - pos : `Vec4`  
     爆炸发生的坐标
 - 拦截事件：函数返回`false`
 <br>

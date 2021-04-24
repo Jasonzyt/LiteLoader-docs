@@ -69,10 +69,12 @@
 <br>
 
 ### 断开指定玩家连接  
-`kickPlayer(player)`
+`kickPlayer(player,msg)`
 - 参数：
     - player : `Pointer`  
     玩家指针  
+    - msg : `String`
+    被踢出玩家出显示的断开原因  
 - 返回值：是否成功断开连接
 - 返回值类型：`Boolean`  
 <br>
@@ -97,6 +99,17 @@
     目标位置坐标 
 - 返回值：是否成功传送
 - 返回值类型：`Boolean`  
+<br>
+
+### 传送玩家至指定服务器  
+`transServer(player,server,port)`
+- 参数：
+    - player : `Pointer`  
+    玩家指针
+    - server : `String`
+    目标服务器IP / 域名
+    - port : `Number`
+    目标服务器端口  
 <br>
 
 ### 以指定玩家身份执行一条指令  
