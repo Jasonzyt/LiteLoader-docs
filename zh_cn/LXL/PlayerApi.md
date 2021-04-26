@@ -14,7 +14,7 @@
 ### 获取玩家名字  
 `getName(player)`
 - 参数：
-    - target : `Pointer`  
+    - player : `Pointer`  
     待查询的玩家指针  
 - 返回值：目标玩家的名字
 - 返回值类型： `String` 
@@ -34,17 +34,27 @@
 ### 获取玩家坐标  
 `getPos(player)`
 - 参数：
-    - target : `Pointer`  
+    - player : `Pointer`  
     待查询的玩家指针  
 - 返回值：目标玩家的位置
-- 返回值类型：`Vec4` 
+- 返回值类型：`FloatPos` 
     - 如返回值为 `Null` 则表示获取位置失败  
 <br>
 
 ### 获取玩家真实名字（无法被篡改）  
 `getRealName(player)`
 - 参数：
-    - target : `Pointer`  
+    - player : `Pointer`  
+    待查询的玩家指针  
+- 返回值：目标玩家的IP地址
+- 返回值类型： `String` 
+    - 如返回值为 `空字符串` 则表示获取IP失败  
+<br>
+
+### 获取玩家IP地址  
+`getIP(player)`
+- 参数：
+    - player : `Pointer`  
     待查询的玩家指针  
 - 返回值：目标玩家的真实名字
 - 返回值类型： `String` 
@@ -57,6 +67,24 @@
     - player : `Pointer`  
     待查询的玩家指针  
 - 返回值：是否为OP
+- 返回值类型：`Boolean`  
+<br>
+
+### 查询玩家操作权限  
+``
+- 参数：
+    - player : `Pointer`  
+    待查询的玩家指针  
+- 返回值：
+- 返回值类型：``  
+<br>
+
+### 修改玩家操作权限  
+``
+- 参数：
+    - player : `Pointer`  
+    待修改的玩家指针  
+- 返回值：是否成功修改
 - 返回值类型：`Boolean`  
 <br>
 
@@ -95,7 +123,7 @@
 - 参数：
     - player : `Pointer`  
     玩家指针
-    - pos : `Vec4`  
+    - pos : `FloatPos`  
     目标位置坐标 
 - 返回值：是否成功传送
 - 返回值类型：`Boolean`  

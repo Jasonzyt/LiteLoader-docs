@@ -8,7 +8,7 @@
 - 参数：
     - entity : `Pointer`  
     实体指针
-    - pos : `Vec4`  
+    - pos : `FloatPos`  
     目标位置坐标
 - 返回值：是否成功传送
 - 返回值类型：`Boolean`   

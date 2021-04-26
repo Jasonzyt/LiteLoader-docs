@@ -128,7 +128,7 @@
     破坏方块的玩家指针
     - block : `Pointer`  
     被破坏的方块指针
-    - pos : `Vec4`  
+    - pos : `IntPos`  
     被破坏的方块坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -141,7 +141,7 @@
     放置方块的玩家指针
     - block : `Pointer`  
     被放置的方块指针
-    - pos : `Vec4`  
+    - pos : `IntPos`  
     被放置的方块坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -152,7 +152,7 @@
 - 参数：
     - player : `Pointer`  
     打开箱子的玩家指针
-    - pos : `Vec4`  
+    - pos : `IntPos`  
     被打开的箱子坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -163,7 +163,7 @@
 - 参数：
     - player : `Pointer`  
     关闭箱子的玩家指针
-    - pos : `Vec4`  
+    - pos : `IntPos`  
     被关闭的箱子坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -174,7 +174,7 @@
 - 参数：
     - player : `Pointer`  
     打开木桶的玩家指针
-    - pos : `Vec4`  
+    - pos : `IntPos`  
     被打开的木桶坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -185,7 +185,7 @@
 - 参数：
     - player : `Pointer`  
     关闭木桶的玩家指针
-    - pos : `Vec4`  
+    - pos : `IntPos`  
     被关闭的木桶坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -237,7 +237,7 @@
 - 参数：
     - source : `Pointer`  
     爆炸来源的实体指针
-    - pos : `Vec4`  
+    - pos : `FloatPos`  
     爆炸发生的坐标
 - 拦截事件：函数返回`false`
 <br>
@@ -248,7 +248,7 @@
 - 参数：
     - cmd : `String`  
     执行的命令
-    - pos : `Vec4`
+    - pos : `IntPos`
     执行命令的命令方块坐标
 - 拦截事件：函数返回`false`
 <br>
