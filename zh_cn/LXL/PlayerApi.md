@@ -8,7 +8,7 @@
     玩家的名字或者Xuid  
 - 返回值：玩家指针  
 - 返回值类型：`Pointer` 
-    - 如返回值为 `0` 则表示获取玩家失败  
+    - 如返回值为 `null` 则表示获取玩家失败  
 <br>
 
 ### 获取玩家名字  
@@ -18,7 +18,7 @@
     待查询的玩家指针  
 - 返回值：目标玩家的名字
 - 返回值类型： `String` 
-    - 如返回值为 `空字符串` 则表示获取名字失败  
+    - 如返回值为 `null` 则表示获取名字失败  
 <br>
 
 ### 获取玩家Xuid  
@@ -28,7 +28,7 @@
     玩家指针  
 - 返回值：玩家的Xuid  
 - 返回值类型：`String` 
-    - 如返回值为 `空字符串` 则表示获取Xuid失败  
+    - 如返回值为 `null` 则表示获取Xuid失败  
 <br>
 
 ### 获取玩家坐标  
@@ -48,7 +48,7 @@
     待查询的玩家指针  
 - 返回值：目标玩家的IP地址
 - 返回值类型： `String` 
-    - 如返回值为 `空字符串` 则表示获取IP失败  
+    - 如返回值为 `null` 则表示获取IP失败  
 <br>
 
 ### 获取玩家IP地址  
@@ -58,7 +58,7 @@
     待查询的玩家指针  
 - 返回值：目标玩家的真实名字
 - 返回值类型： `String` 
-    - 如返回值为 `空字符串` 则表示获取名字失败  
+    - 如返回值为 `null` 则表示获取名字失败  
 <br>
 
 ### 判断玩家是否为OP  
@@ -70,20 +70,32 @@
 - 返回值类型：`Boolean`  
 <br>
 
-### 查询玩家操作权限  
-``
+### 查询玩家操作权限等级  
+`getPlayerPermLevel(player)`
 - 参数：
     - player : `Pointer`  
     待查询的玩家指针  
-- 返回值：
-- 返回值类型：``  
+- 返回值：目标玩家的操作权限
+- 返回值类型：`Number`
+    - 0 : Normal
+    - 1 : Privileged
+    - 2 : AutomationPlayer
+    - 3 : OperatorOnly
+    - 4 : ConsoleOnly  
 <br>
 
-### 修改玩家操作权限  
-``
+### 修改玩家操作权限等级  
+`setPlayerPermLevel(player,level)`
 - 参数：
     - player : `Pointer`  
     待修改的玩家指针  
+    - level : `Number`
+    目标操作权限等级
+        - 0 : Normal
+        - 1 : Privileged
+        - 2 : AutomationPlayer
+        - 3 : OperatorOnly
+        - 4 : ConsoleOnly  
 - 返回值：是否成功修改
 - 返回值类型：`Boolean`  
 <br>
@@ -107,13 +119,25 @@
 - 返回值类型：`Boolean`  
 <br>
 
-### 发送一个原始文本给玩家  
-`tellraw(player,msg)`
+### 发送一个文本给玩家  
+`tell(player,msg,[type])`
 - 参数：
     - player : `Pointer`  
     玩家指针
     - msg : `String`  
-    待发送的rawjson文本  
+    待发送的文本  
+    - type(可选参数) : `Number`
+    发送的文本消息类型，默认为0
+        - 0 Raw
+        - 1 Chat
+        - 2 Translation
+        - 3 Popup
+        - 4 JukeboxPopup
+        - 5 Tip
+        - 6 System
+        - 7 Whisper
+        - 8 Announcement
+        - 9 Json
 - 返回值：是否成功发送
 - 返回值类型：`Boolean`  
 <br>
