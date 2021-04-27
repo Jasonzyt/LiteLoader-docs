@@ -248,7 +248,7 @@
 - 参数：
     - cmd : `String`  
     执行的命令
-    - pos : `IntPos`
+    - pos : `IntPos`  
     执行命令的命令方块坐标
 - 拦截事件：函数返回`false`
 <br>

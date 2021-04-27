@@ -8,7 +8,7 @@
     玩家的名字或者Xuid  
 - 返回值：玩家指针  
 - 返回值类型：`Pointer` 
-    - 如返回值为 `null` 则表示获取玩家失败  
+    - 如返回值为 `Null` 则表示获取玩家失败  
 <br>
 
 ### 获取玩家名字  
@@ -18,7 +18,7 @@
     待查询的玩家指针  
 - 返回值：目标玩家的名字
 - 返回值类型： `String` 
-    - 如返回值为 `null` 则表示获取名字失败  
+    - 如返回值为 `Null` 则表示获取名字失败  
 <br>
 
 ### 获取玩家Xuid  
@@ -28,7 +28,7 @@
     玩家指针  
 - 返回值：玩家的Xuid  
 - 返回值类型：`String` 
-    - 如返回值为 `null` 则表示获取Xuid失败  
+    - 如返回值为 `Null` 则表示获取Xuid失败  
 <br>
 
 ### 获取玩家坐标  
@@ -41,6 +41,15 @@
     - 如返回值为 `Null` 则表示获取位置失败  
 <br>
 
+### 杀死玩家  
+`kill(player,pos)`
+- 参数：
+    - player : `Pointer`  
+    玩家指针  
+- 返回值：是否成功执行
+- 返回值类型：`Boolean`   
+<br>
+
 ### 获取玩家真实名字（无法被篡改）  
 `getRealName(player)`
 - 参数：
@@ -48,7 +57,7 @@
     待查询的玩家指针  
 - 返回值：目标玩家的IP地址
 - 返回值类型： `String` 
-    - 如返回值为 `null` 则表示获取IP失败  
+    - 如返回值为 `Null` 则表示获取IP失败  
 <br>
 
 ### 获取玩家IP地址  
@@ -58,7 +67,7 @@
     待查询的玩家指针  
 - 返回值：目标玩家的真实名字
 - 返回值类型： `String` 
-    - 如返回值为 `null` 则表示获取名字失败  
+    - 如返回值为 `Null` 则表示获取名字失败  
 <br>
 
 ### 判断玩家是否为OP  
@@ -68,6 +77,7 @@
     待查询的玩家指针  
 - 返回值：是否为OP
 - 返回值类型：`Boolean`  
+    - 如返回值为 `Null` 则表示获取玩家信息失败  
 <br>
 
 ### 查询玩家操作权限等级  
@@ -76,12 +86,12 @@
     - player : `Pointer`  
     待查询的玩家指针  
 - 返回值：目标玩家的操作权限
-- 返回值类型：`Number`
     - 0 : Normal
     - 1 : Privileged
     - 2 : AutomationPlayer
     - 3 : OperatorOnly
     - 4 : ConsoleOnly  
+- 返回值类型：`Number`
 <br>
 
 ### 修改玩家操作权限等级  
@@ -109,18 +119,18 @@
 <br>
 
 ### 断开指定玩家连接  
-`kickPlayer(player,msg)`
+`kickPlayer(player[,msg])`
 - 参数：
     - player : `Pointer`  
     玩家指针  
-    - msg : `String`
-    被踢出玩家出显示的断开原因  
+    - msg(可选参数) : `String`
+    被踢出玩家出显示的断开原因。默认为“正在断开连接”  
 - 返回值：是否成功断开连接
 - 返回值类型：`Boolean`  
 <br>
 
 ### 发送一个文本给玩家  
-`tell(player,msg,[type])`
+`tell(player,msg[,type])`
 - 参数：
     - player : `Pointer`  
     玩家指针
@@ -162,15 +172,35 @@
     目标服务器IP / 域名
     - port : `Number`
     目标服务器端口  
+- 返回值：是否成功传送
+- 返回值类型：`Boolean` 
+<br>
+
+### 查询玩家背包  
+`getPack(player,)`
+- 参数：
+    - player : `Pointer`  
+    玩家指针
+- 返回值：
+- 返回值类型：  
+<br>
+
+### 获取玩家手持物品  
+`getHand(player)`
+- 参数：
+    - player : `Pointer`  
+    玩家指针
+- 返回值：手持的物品指针
+- 返回值类型：`Pointer`  
 <br>
 
 ### 以指定玩家身份执行一条指令  
-`runCmdAs(cmd,player)`
+`runCmdAs(player,cmd)`
 - 参数：
-    - cmd : `String`  
-    待执行的命令
     - player : `Pointer`  
     玩家指针  
+    - cmd : `String`  
+    待执行的命令  
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`   
 <br>
@@ -183,14 +213,5 @@
     - newname : `String`  
     玩家的新名字  
 - 返回值：是否重命名成功
-- 返回值类型：`Boolean`  
-<br>
-
-### 使玩家着火  
-`setOnFire(player)`
-- 参数：
-    - player : `Pointer`  
-    目标玩家指针  
-- 返回值：是否操作成功
 - 返回值类型：`Boolean`  
 <br>
