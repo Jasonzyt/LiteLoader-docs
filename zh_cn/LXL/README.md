@@ -7,7 +7,7 @@
 
 ## 特点
 1. **跨语言**脚本支持  
-基于开源`ScriptX`框架开发，借助其强大的抽象能力，支持多种不同脚本语言编写的插件同时运行，且底层仅需一层统一的C++ API接口，维护和适配都比较方便。
+基于开源`ScriptX`框架开发，借助其强大的抽象能力，支持多种不同脚本语言编写的插件同时运行，且底层仅需一层统一的C++ API接口，维护和适配都比较方便。  
 目前已支持语言：`JavaScript`，`Lua`  
 即将支持的语言：`Python`，`Ruby`，`C#`
 
@@ -45,14 +45,15 @@
 
 > 你没看错，就这么简单 =w=
 
-`LiteXLoader`的配置文件位于`BDS根目录/plugins/LiteXLoader/config.ini`
+`LiteXLoader`的配置文件位于`BDS根目录/plugins/LiteXLoader/config.ini`，可以修改相关配置。
 
 ## 开发文档
-请[移步文档站](http://docs.litetitle.com/#/zh_cn/LXL)查看详细的API文档  
+请[移步文档站](http://docs.litetitle.com/#/zh_cn/LXL/README)查看详细的API文档  
 如果有修订需求或者有新增API的需要，欢迎联系作者或者发布Issue
 
 ## 兼容性与可扩展性
-兼容`旧LiteLuaRunner`、`NetJsRunner`、`IronLuaRunner`的大部分插件。部分API并未适配，仅作为方便开发者而设计兼容层。
+兼容`旧LiteLuaRunner`、`NetJsRunner`、`IronLuaRunner`的大部分插件。  
+部分API并未适配，仅作为方便开发者而设计兼容层。  
 请[移步文档站](http://docs.litetitle.com/#/zh_cn/LXL/BaseLib)查看详细的分析  
 
 ## 实时调试
@@ -62,10 +63,10 @@
 - `luadebug`  
 进入Lua实时调试模式
 
-实时调试模式下，标准输入会被当做对应类型的脚本语言执行，并实时输出结果。
+实时调试模式下，标准输入会被当做对应类型的脚本语言执行，并实时输出结果。  
 再次输入对应的xxdebug将退出实时调试模式。
 
 ## 联系作者
-LiteXLoader交流群：850517473 [点击加入群聊](https://jq.qq.com/?_wv=1027&k=zeUbrETH)
-LiteLoader交流群：656669024 [点击加入群聊](https://jq.qq.com/?_wv=1027&k=lagwtrfh)
+LiteXLoader交流群：850517473 [点击加入群聊](https://jq.qq.com/?_wv=1027&k=zeUbrETH)  
+LiteLoader交流群：656669024 [点击加入群聊](https://jq.qq.com/?_wv=1027&k=lagwtrfh)  
 欢迎向作者反馈崩溃和版本适配问题。务必准备好详细的情况描述，过于简略的提问不予作答。
