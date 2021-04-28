@@ -10,7 +10,7 @@
 
   * [LiteXLoader](zh_cn/LXL)
     * 简介
-      * [快速入门](zh_cn/LXL/Features)
+      * [快速入门](zh_cn/LXL/README)
       * [兼容性与脚本基础库](zh_cn/LXL/BaseLib)
     * 游戏互动接口
       * [通用 API](zh_cn/LXL/BaseApi)

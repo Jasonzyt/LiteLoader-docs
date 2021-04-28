@@ -115,7 +115,7 @@
     - player : `Pointer`  
     玩家指针  
     - msg(可选参数) : `String`
-    被踢出玩家出显示的断开原因。默认为“正在断开连接”  
+    被踢出玩家出显示的断开原因。默认为“正在从服务器断开连接”  
 - 返回值：是否成功断开连接
 - 返回值类型：`Boolean`  
 <br>
@@ -129,16 +129,10 @@
     待发送的文本  
     - type(可选参数) : `Number`
     发送的文本消息类型，默认为0
-        - 0 Raw
-        - 1 Chat
-        - 2 Translation
-        - 3 Popup
-        - 4 JukeboxPopup
-        - 5 Tip
-        - 6 System
-        - 7 Whisper
-        - 8 Announcement
-        - 9 Json
+        - 0 Raw 普通消息
+        - 1 Chat 聊天消息
+        - 5 Tip 物品栏上方的消息
+        - 9 Json Json格式消息
 - 返回值：是否成功发送
 - 返回值类型：`Boolean`  
 <br>
@@ -197,7 +191,7 @@
 <br>
 
 ### 杀死玩家  
-`kill(player,pos)`
+`kill(player)`
 - 参数：
     - player : `Pointer`  
     玩家指针  
