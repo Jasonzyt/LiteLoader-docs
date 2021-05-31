@@ -14,5 +14,5 @@
   * [方块API](zh_cn/LLlua/BlockApi)
   * [物品API](zh_cn/LLlua/ItemApi)
   * [NBT相关API](zh_cn/LLlua/NBTApi)
-* [LiteXLoader](../LXL/)
+* [LiteXLoader](LXL/)
 
