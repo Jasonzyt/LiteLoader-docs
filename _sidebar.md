@@ -13,4 +13,4 @@
     * [BlockAPI](zh_cn/LLlua/BlockApi)
     * [ItemAPI](zh_cn/LLlua/ItemApi)
     * [NBTAPI](zh_cn/LLlua/NBTApi)
-  * [LiteXLoader](LXL/)
+  * [LiteXLoader](https://lxl.litetitle.com/)
