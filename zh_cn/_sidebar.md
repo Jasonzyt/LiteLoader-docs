@@ -1,6 +1,7 @@
 * LiteLoader
 
-  * [插件开发](zh_cn/LL/Plugin-development)  
+  * [插件开发](zh_cn/LL/Plugins-Dev)  
+    * [初始化项目](zh_cn/LL/PluginsDev/Init-Repo)
   * [预加载插件](zh_cn/LL/Preload-plugins )  
   * [文件和目录说明](zh_cn/LL/Files-and-folders)
 

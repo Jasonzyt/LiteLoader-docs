@@ -2,5 +2,4 @@ Create `preload.conf` in `plugins\` directory, fill in the file name which need 
 such as:
 ```
 plugins\\preload\\BDSNetRunner.dll
-Cool.dll
 ```
