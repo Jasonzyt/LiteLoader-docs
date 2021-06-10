@@ -18,8 +18,8 @@
 打开Visual Stdio，创建一个动态链接库项目
 ![5](../../../images/Init-Repo-5.png)
 项目创建完成后，将之前解压得到的`headers`和`lib`文件夹复制到项目所在文件夹内  
-然后右键新建的项目的名称，点击**属性**
-![6](../../../images/Init-Repo-6.png)
+然后右键新建的项目的名称，点击**属性**  
+![6](../../../images/Init-Repo-6.png)  
 将图中的**C++语言标准**改为**C++17**
 ![7](../../../images/Init-Repo-7.png)
 切换到**VC++目录**选项卡，在**包含目录**中添加`$(SolutionDir)headers;`，如图所示，完成后点击确定
@@ -29,10 +29,10 @@
 
 打开`pch.h`，删除`include "framework.h"`并添加`#include <iostream>`  
 打开`dllmain.cpp`，在文件开头和末尾分别添加以下内容：
-```cpp
+```c++
 #include "framework.h"
 ```
-```cpp
+```c++
 void entry();
 
 extern "C" {
@@ -44,7 +44,7 @@ extern "C" {
 ```
 然后创建一个cpp文件用于存放插件入口函数`entry`，也可以直接在`dllmain.cpp`定义`entry`  
 在新建的文件内添加以下内容：
-```cpp
+```c++
 void entry() {
     std::cout << "Hello World\n";
 }
