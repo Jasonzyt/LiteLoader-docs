@@ -29,10 +29,10 @@
 
 打开`pch.h`，删除`include "framework.h"`并添加`#include <iostream>`  
 打开`dllmain.cpp`，在文件开头和末尾分别添加以下内容：
-```c++
+```cpp
 #include "framework.h"
 ```
-```c++
+```cpp
 void entry();
 
 extern "C" {
@@ -44,7 +44,7 @@ extern "C" {
 ```
 然后创建一个cpp文件用于存放插件入口函数`entry`，也可以直接在`dllmain.cpp`定义`entry`  
 在新建的文件内添加以下内容：
-```c++
+```cpp
 void entry() {
     std::cout << "Hello World\n";
 }
