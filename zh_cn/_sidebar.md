@@ -2,7 +2,7 @@
 
   * [插件开发](zh_cn/LL/Plugins-Dev)  
     * [初始化项目](zh_cn/LL/PluginsDev/Init-Repo)
-    * [基础事件系统](zh_cn/LL/Plugins-Dev/Basic-Event)
+    * [基础事件系统](zh_cn/LL/PluginsDev/Basic-Event)
   * [预加载插件](zh_cn/LL/Preload-plugins )  
   * [文件和目录说明](zh_cn/LL/Files-and-folders)
 
