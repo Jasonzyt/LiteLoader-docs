@@ -54,6 +54,12 @@
                     '/': 'Copied'
                 }
             },
+            pagination: {
+                previousText: '上一章节',
+                nextText: '下一章节',
+                crossChapter: true,
+                crossChapterText: true,
+            },
             plugins: [
                 EditOnGithubPlugin.create('https://github.com/LiteLDev/Docs/blob/master/', null, function (file) {
                     if (file.indexOf('zh_cn') === 0) {
@@ -73,6 +79,7 @@
     <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-cpp.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-lua.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
 
 </html>
