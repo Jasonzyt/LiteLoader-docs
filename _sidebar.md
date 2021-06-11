@@ -5,6 +5,7 @@
     * [2.Basic event](zh_cn/LL/PluginsDev/Basic-Event)
     * [3.Register commands](zh_cn/LL/PluginsDev/Register-Commands)
   * [Preload plugins](LL/Preload-plugins)
+  * [About files and folders](zh_cn/LL/Files-and-folders)
 
 * Plugins
   
