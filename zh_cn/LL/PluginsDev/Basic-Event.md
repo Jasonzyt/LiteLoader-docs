@@ -19,7 +19,7 @@ Event::addEventListener([](PlayerDestroyEV ev) {
         });
 ```
 这样，插件就监听了玩家破坏方块事件并在事件触发时在控制台输出信息  
-你也可以选择不用lambda函数：
+你也可以选择不用lambda表达式：
 ```cpp
 void entry() {
     Event::addEventListener(playerDestroy);
@@ -44,10 +44,10 @@ LIAPI inline void addEventListener(function<bool(CmdBlockExeEV)> callback);//命
 LIAPI inline void addEventListener(function<void(RegCmdEV)> callback);//注册命令
 LIAPI inline void addEventListener(function<void(PlayerDeathEV)> callback);//玩家死亡
 LIAPI inline void addEventListener(function<void(PlayerDestroyEV)> callback);//玩家破坏方块
-LIAPI inline void addEventListener(function<void(PlayerUseItemOnEV)> callback);//玩家使用物品
+LIAPI inline void addEventListener(function<void(PlayerUseItemOnEV)> callback);//玩家使用物品在一个方块上
 LIAPI inline void addEventListener(function<void(MobHurtedEV)> callback);//生物被攻击
 LIAPI inline void addEventListener(function<void(PlayerUseItemEV)> callback);//玩家使用物品
-LIAPI inline void addEventListener(function<void(PostInitEV)> callback);//LiteLoader加载
+LIAPI inline void addEventListener(function<void(PostInitEV)> callback);//LiteLoader加载时
 LIAPI inline void addEventListener(function<void(MobDieEV)> callback);//生物死亡
 LIAPI inline void addEventListener(function<void(PreJoinEV)> callback);//玩家连接服务器
 };  // namespace Event
