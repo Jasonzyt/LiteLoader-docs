@@ -1,16 +1,16 @@
 # 基础事件
 LiteLoader内置的一套基础事件系统，为开发者省去了寻找符号的麻烦  
 要引用LiteLoader内置的Api，你需要将**LiteLoader.lib**添加进项目  
-右键项目名称，选择**添加->现有项**，然后找到项目所在目录下的**lib**文件夹中的**LiteLoader.lib**，点击添加
-![1](../../../images/Basic-Event-1.png)
+右键项目名称，选择**添加->现有项**，然后找到项目所在目录下的**lib**文件夹中的**LiteLoader.lib**，点击添加  
+![1](../../../images/Basic-Event-1.png)  
 ![2](../../../images/Basic-Event-2.png)
 
-首先在`pch.h`中添加如下代码以引用事件系统和`Player`(玩家)类的头文件：
+首先在`pch.h`中添加如下代码以引用事件系统和`Player`(玩家)类的头文件：  
 ```cpp
 #include <api/Basic_Event.h>
 #include <mc/Player.h>
 ```
-然后在项目的`entry`函数中添加以下示例代码：
+然后在项目的`entry`函数中添加以下示例代码：  
 ```cpp
 Event::addEventListener([](PlayerDestroyEV ev) {
         string name = ev.Player->getNameTag();
@@ -19,7 +19,7 @@ Event::addEventListener([](PlayerDestroyEV ev) {
         });
 ```
 这样，插件就监听了玩家破坏方块事件并在事件触发时在控制台输出信息  
-你也可以选择不用lambda表达式：
+你也可以选择不用lambda表达式：  
 ```cpp
 void entry() {
     Event::addEventListener(playerDestroy);
@@ -31,7 +31,7 @@ void playerDestory(PlayerDestroyEV ev) {
         std::cout << name << "在" << pos << "破坏了一个方块\n";
 }
 ```
-目前可使用事件系统监听的事件有
+目前可使用事件系统监听的事件有  
 ```cpp
 namespace Event {
 LIAPI inline void addEventListener(function<void(JoinEV)> callback);//玩家加入服务器

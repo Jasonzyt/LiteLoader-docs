@@ -1,16 +1,16 @@
-# 基础事件
+# Basic events
 The built-in basic event system of LiteLoader saves developers the trouble of finding symbols  
 To reference the built-in Api of LiteLoader, you need to add **LiteLoader.lib** to the project  
-Right-click the project, select **Add->Existing Item**, then find **LiteLoader.lib** in the lib folder under the project directory, and click Add
+Right-click the project, select **Add->Existing Item**, then find **LiteLoader.lib** in the lib folder under the project directory, and click Add  
 ![1](../../../images/Basic-Event-1.png)
 ![2](../../../images/Basic-Event-2.png)
 
-First you need to add these code to `pch.h` for including event system and `Player` class
+First you need to add these code to `pch.h` for including event system and `Player` class  
 ```cpp
 #include <api/Basic_Event.h>
 #include <mc/Player.h>
 ```
-Then add the following sample code in the `entry` function:
+Then add the following sample code in the `entry` function:  
 ```cpp
 Event::addEventListener([](PlayerDestroyEV ev) {
         string name = ev.Player->getNameTag();
@@ -19,7 +19,7 @@ Event::addEventListener([](PlayerDestroyEV ev) {
         });
 ```
 In this way, the plug-in listens to the player's block destruction event and outputs information on the console when the event is triggered  
-You can also choose not to use lambda expressions:
+You can also choose not to use lambda expressions:  
 ```cpp
 void entry() {
     Event::addEventListener(playerDestroy);
@@ -31,7 +31,7 @@ void playerDestory(PlayerDestroyEV ev) {
         std::cout << name << "destroyed a block at " << pos << "\n";
 }
 ```
-Currently the events that can be listened are
+Currently the events that can be listened are  
 ```cpp
 namespace Event {
 LIAPI inline void addEventListener(function<void(JoinEV)> callback);//When a player joined server
