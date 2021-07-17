@@ -54,4 +54,4 @@ LIAPI inline void addEventListener(function<void(PreJoinEV)> callback);//玩家�
 ```
 
 如果 callback 函数的返回值类型为`bool`，那说明此事件可以被拦截。  
-在 callback 中 `return true`  以拦截此事件。
+在 callback 中 `return false`  以拦截此事件。
