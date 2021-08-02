@@ -27,8 +27,8 @@ void entry() {
 
 void playerDestory(PlayerDestroyEV ev) {
     string name = ev.Player->getNameTag();
-        string pos = std::to_string(ev.blkpos.x) + "," +  std::to_string(ev.blkpos.y) + "," +  std::to_string(ev.blkpos.z);
-        std::cout << name << "在" << pos << "破坏了一个方块\n";
+    string pos = std::to_string(ev.blkpos.x) + "," +  std::to_string(ev.blkpos.y) + "," +  std::to_string(ev.blkpos.z);
+    std::cout << name << "在" << pos << "破坏了一个方块\n";
 }
 ```
 目前可使用事件系统监听的事件有  
