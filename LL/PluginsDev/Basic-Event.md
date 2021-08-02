@@ -27,8 +27,8 @@ void entry() {
 
 void playerDestory(PlayerDestroyEV ev) {
     string name = ev.Player->getNameTag();
-        string pos = std::to_string(ev.blkpos.x) + "," +  std::to_string(ev.blkpos.y) + "," +  std::to_string(ev.blkpos.z);
-        std::cout << name << "destroyed a block at " << pos << "\n";
+    string pos = std::to_string(ev.blkpos.x) + "," +  std::to_string(ev.blkpos.y) + "," +  std::to_string(ev.blkpos.z);
+    std::cout << name << "destroyed a block at " << pos << "\n";
 }
 ```
 Currently the events that can be listened are  
