@@ -2,7 +2,11 @@
 ## 注册指令基础
 LiteLoader内置了真正的指令注册Api  
 以下内容需要包含下列头文件：  
-`mc/Command.h` `mc/CommandReg.h` `api/regCommandHelper`  
+```cpp
+#include <mc/Command.h>
+#include <mc/CommandReg.h>
+#include <api/regCommandHelper.h>
+```
 要为您的插件注册指令，需要在插件的`entry`函数中监听`RegCmdEv`，示例代码：  
 ```cpp
 Event::addEventListener([](RegCmdEV ev) {
