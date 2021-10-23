@@ -34,6 +34,7 @@ bool oncmd_wow(CommandOrigin const& ori, CommandOutput& outp, string const& str,
 HelloWorld
 ILoveChina
 ```
+
 ## 使用枚举类型注册指令
 如果您想要您的插件也能注册像`/scoreboard`那样有参数提示的命令，那么需要使用枚举  
 首先，让我们写一个枚举类型（必须从`1`开始而不是从默认的`0`开始） 
@@ -72,6 +73,7 @@ Event::addEventListener([](RegCmdEV ev) {
     CmdOverload(score, onCmdScore, "op", "score");
 });
 ```
+
 ## `optional`模板类的使用
 `optional`模板类并不是标准库中的`std::optional`，这个类定义于`stl/optional.h`  
 它是命令注册的一部分，作为游戏中命令的可选参数(在游戏内表现为`/cmd [xx: xx]`),并且在上面的样例中已多次使用  
@@ -81,6 +83,7 @@ Event::addEventListener([](RegCmdEV ev) {
   请注意,在调用`val()`之前一定要确保`Set()`的返回值为真，否则会抛出异常!
 - 成员函数`Set()`
   返回值: `bool` 此可选参数是否已被设置
+  
 ## `CommandSelector`模板类的使用
 `CommandSelector`，顾名思义，即游戏中的目标选择器，可以快捷方便的选择多个玩家或实体  
 `CommandSelector`类的模板只接受一下两种类型: `Actor`&`Player`  
@@ -88,6 +91,7 @@ Event::addEventListener([](RegCmdEV ev) {
 - 成员函数`results(CommandOrigin const& ori)`
   返回值：`CommandSelectorResults<T>` 目标选择器的结果   
   参数`ori`: `CommandOrigin const&` 即命令回调函数的参数1
+  
 ## `CommandSelectorResults`模板类的使用
 `CommandSelectorResults`，顾名思义，即目标选择器选择的结果  
 - 成员函数`begin()`: 
